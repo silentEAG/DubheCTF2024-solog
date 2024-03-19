@@ -1,0 +1,21 @@
+[package]
+name = "chall"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+
+[features]
+default = ["custom-heap"]
+custom-heap = []
+
+[dependencies]
+arrayref = "0.3.7"
+
+borsh = "1.3.1"
+borsh-derive = "1.3.1"
+solana-program = {version = "=1.18.1" }
